@@ -3,13 +3,13 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	DokuWiki plugin: Add a comments section to Wiki pages
 Name:		dokuwiki-plugin-%{plugin}
-Version:	20101116
-Release:	6
+Version:	20150517
+Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	http://github.com/dokufreaks/plugin-%{plugin}/tarball/master#/%{plugin}.tgz
-# Source0-md5:	d08cca126e07c04d92d7ca38fa92c52f
-URL:		http://www.dokuwiki.org/plugin:discussion
+Source0:	https://github.com/dokufreaks/plugin-%{plugin}/tarball/master/%{plugin}-%{version}.tar.gz
+# Source0-md5:	3dcff9016981f572bc6a983641535a83
+URL:		https://www.dokuwiki.org/plugin:discussion
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.520
 Requires:	dokuwiki >= 20061106
