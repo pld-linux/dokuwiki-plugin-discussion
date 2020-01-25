@@ -1,6 +1,5 @@
 %define		plugin		discussion
 %define		php_min_version 5.0.0
-%include	/usr/lib/rpm/macros.php
 Summary:	DokuWiki plugin: Add a comments section to Wiki pages
 Name:		dokuwiki-plugin-%{plugin}
 Version:	20150517
