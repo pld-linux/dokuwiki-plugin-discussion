@@ -1,13 +1,15 @@
+%define		subver	2021-12-31
+%define		ver		%(echo %{subver} | tr -d -)
 %define		plugin		discussion
 %define		php_min_version 5.0.0
 Summary:	DokuWiki plugin: Add a comments section to Wiki pages
 Name:		dokuwiki-plugin-%{plugin}
-Version:	20150517
+Version:	%{ver}
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	https://github.com/dokufreaks/plugin-%{plugin}/tarball/master/%{plugin}-%{version}.tar.gz
-# Source0-md5:	3dcff9016981f572bc6a983641535a83
+Source0:	https://github.com/dokufreaks/plugin-%{plugin}/tarball/785e1e7/%{plugin}-%{version}.tar.gz
+# Source0-md5:	a71538b8d82fb463c73d2369c61018f7
 URL:		https://www.dokuwiki.org/plugin:discussion
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.520
