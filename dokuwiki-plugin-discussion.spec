@@ -12,6 +12,7 @@ Source0:	https://github.com/dokufreaks/plugin-%{plugin}/tarball/785e1e7/%{plugin
 # Source0-md5:	a71538b8d82fb463c73d2369c61018f7
 URL:		https://www.dokuwiki.org/plugin:discussion
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	rpmbuild(find_lang) >= 1.41
 BuildRequires:	rpmbuild(macros) >= 1.520
 Requires:	dokuwiki >= 20061106
 Requires:	php(core) >= %{php_min_version}
@@ -23,7 +24,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		dokuconf	/etc/webapps/dokuwiki
 %define		dokudir		/usr/share/dokuwiki
 %define		plugindir	%{dokudir}/lib/plugins/%{plugin}
-%define		find_lang 	%{_usrlibrpm}/dokuwiki-find-lang.sh %{buildroot}
 
 # no pear deps
 %define		_noautopear	pear
@@ -60,7 +60,7 @@ install -d $RPM_BUILD_ROOT%{plugindir}
 cp -a . $RPM_BUILD_ROOT%{plugindir}
 %{__rm} $RPM_BUILD_ROOT%{plugindir}/{COPYING,README}
 
-%find_lang %{name}.lang
+%find_lang %{name}.lang --with-dokuwiki
 
 %clean
 rm -rf $RPM_BUILD_ROOT
